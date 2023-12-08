@@ -10,10 +10,34 @@ a{text-decoration: none;} /* 기본서식 밑줄을 제거 */
  .wrap{display: flex;justify-content: space-between;}
 
 /* 부모가 자식의 높이를 인지 못하므로, 이런 경우  높이를 설정해야 함.  */
- .board .tab{position: relative; width: 100%; height: 400px;  background-color: grey;}
+ .board .tab{
+    position: relative; 
+    display: flex;
+    /* flex : 자식요소가 높이x - 부모높이 100%로 자동 지정 */
+    width: 100%; height: 400px;}
  .board .tab > li{}
- .board .tab > li > a{background-color: yellow;}
+ .board .tab > li > a{padding: 0 30px; line-height: 50px;}
  .board .tab > li > .panel{
+    display: none;
     position: absolute; left:0; top:50px;
-    width: 100%; height: 350px; background-color: pink;
+    width: 100%; height: 350px;
+  
 }
+.board .tab > li.show > .panel{display:block}
+
+.board .tab > li:nth-of-type(1) .panel{background-color: yellow;}
+.board .tab > li:nth-of-type(2) .panel{background-color: pink;}
+.board .tab > li:nth-of-type(3) .panel{background-color: skyblue;}
+
+
+.btn{width: 200px;height: 50px; line-height: 50px; background-color: yellow;}
+
+/* 
+
+    * 자식 선택자
+    띄어쓰기 : 자손중에 모든 요소를 선택
+    > : 바로 하위 자식만 선택해라
+
+*/
+
+/* .panel과 .show클래스를 둘다 가지고 있는 요소를 선택한다 */
