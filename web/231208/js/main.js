@@ -10,12 +10,12 @@ let tab_a = document.querySelectorAll('.board .tab > li > a');
 let tab_panel = document.querySelectorAll('.board .tab > li > .panel');
 
 
+ // classList에서 추가 : add / 제거 : remove
+    
 for(let i = 0; i < tab_a.length; i++){
 
     tab_a[i].addEventListener('click', ()=>{
-        // classList에서 추가 : add / 제거 : remove
-        // 전체 panle의 classList에서 show제거 (remove)
-
+        // 전체 show 클래스 제거
         for(let j = 0; j < tab_a.length; j++){
             tab_panel[j].classList.remove('show');
         }
