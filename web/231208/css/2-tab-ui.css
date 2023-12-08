@@ -1,0 +1,19 @@
+*{margin: 0 ;padding:0;box-sizing: border-box;}
+ul, ol, li{ list-style: none;} /* 목록의 숫자나 기호 제거 */
+a{text-decoration: none;} /* 기본서식 밑줄을 제거 */
+
+
+/* 공통서식 */
+.content{width: 100%; padding: 120px 0;}
+.inner{width: 1170px; margin: 0 auto;}
+.title{margin-bottom: 40px; text-align: center; font: bold 28px 'inherit';}
+ .wrap{display: flex;justify-content: space-between;}
+
+/* 부모가 자식의 높이를 인지 못하므로, 이런 경우  높이를 설정해야 함.  */
+ .board .tab{position: relative; width: 100%; height: 400px;  background-color: grey;}
+ .board .tab > li{}
+ .board .tab > li > a{background-color: yellow;}
+ .board .tab > li > .panel{
+    position: absolute; left:0; top:50px;
+    width: 100%; height: 350px; background-color: pink;
+}

@@ -1,0 +1,68 @@
+/* 전체 선택자 - 모든 요소의 margin, padding 0으로 초기화 해라 */
+/* box-sizing : border-box;
+    요소 크기 
+    - css 기본 사이즈 계산법 : width, padding, border 사이즈를 모두 별도로 계산
+
+        ex) width : 300px; padding : 30px; border: 10px
+                - 사이즈 : 300 + 30*2 + 10 * 2 = 380px을 화면에서 차지 하게 된다.
+                - 실제내용 표시 공간 : 300px
+                - 화면 차지 : 380px
+        
+    - width 안에 padding, border가 포함되어 계산하기는 옵션
+        box-sizing : border-box;
+
+        ex) width : 300px; padding : 30px; border: 10px
+            - 사이즈 : 300px - 30px * 2 - 10px * 2 
+            - 실제내용 표시 공간 : 220px
+            - 화면 차지 : 300px
+            
+*/
+*{margin: 0; padding: 0; box-sizing: border-box;}
+ul, ol, li{list-style: none}
+a{text-decoration: none; color: #444;}
+
+/* 공통서식 */
+.content{width: 100%; padding: 120px 0;}
+.inner{width: 1170px; margin: 0 auto;}
+.title{margin-bottom: 40px; text-align: center; font: bold 28px 'inherit';}
+ 
+/* 자식 요소를 나란히 배치 */
+.wrap{display: flex;justify-content: space-between;}
+
+/* 개별영역 서식 */
+.header{width: 100%; height: 100px;background-color: #ddd;}
+
+/* border-spacing : 셀 간격, border-collapse : 테이블선과 td의 선을 합치기 */
+
+
+
+.board table{width: 100%; border-spacing: 0; border-collapse: collapse; text-align: center;}
+/* td의 홀수줄에만 색상 칠하기 */
+.board table tr:nth-of-type(2n){background-color: #ddd;}
+.board table tr th,
+.board table tr td{height: 26px; border: 1px solid black; font: 16px 'inherit'; color: #444;}
+.board table tr th{background-color: black;color: #fff;}
+
+
+.board table col:nth-of-type(1){width: 50px; }
+.board table col:nth-of-type(2){}
+.board table col:nth-of-type(3){width: 100px;}
+.board table col:nth-of-type(4){width: 100px;}
+.board table col:nth-of-type(5){width: 100px;}
+
+.notice .box{width: 570px;}
+.notice .box .list{width: 100%; display: none;}
+.notice .box .list li {width: 100%; padding: 0 10px;}
+/* 인라인 태그 - 자기 크기만큼 공간차지
+    a , span, strong, em
+*/
+.notice .box .list li a {width: 100%; display: flex; justify-content: space-between;}
+.notice .box .list li a span{line-height: 2; font-size: 14px;}
+
+
+
+
+.footer{width: 100%; height: 300px;background-color: #ddd;}
+
+
+/* 같은 속성이 겹치면, 나중에 써준 것이 적용된다. */

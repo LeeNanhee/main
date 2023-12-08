@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/board.css">
+</head>
+<body>
+    <header class="header">
+        <div class="inner"></div>
+    </header>
+    <section class="board content">
+        <div class="inner">
+            <h2 class="title" onclick="openBoard()">게시판</h2>
+            <table>
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th class="no">번호</th>
+                        <th class="subject">제목</th>
+                        <th class="nick">닉네임</th>
+                        <th class="count">조회수</th>
+                        <th class="date">날짜</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td class="no">1</td>
+                        <td class="subject">게시물 제목</td>
+                        <td class="nick">닉네임</td>
+                        <td class="count">2</td>
+                        <td class="date">2023-12-06</td>
+                    </tr>
+                    <tr>
+                        <td class="no">1</td>
+                        <td class="subject">게시물 제목</td>
+                        <td class="nick">닉네임</td>
+                        <td class="count">2</td>
+                        <td class="date">2023-12-06</td>
+                    </tr>
+                    <tr>
+                        <td class="no">1</td>
+                        <td class="subject">게시물 제목</td>
+                        <td class="nick">닉네임</td>
+                        <td class="count">2</td>
+                        <td class="date">2023-12-06</td>
+                    </tr>
+                    <tr>
+                        <td class="no">1</td>
+                        <td class="subject">게시물 제목</td>
+                        <td class="nick">닉네임</td>
+                        <td class="count">2</td>
+                        <td class="date">2023-12-06</td>
+                    </tr>
+                    <tr>
+                        <td class="no">1</td>
+                        <td class="subject">게시물 제목</td>
+                        <td class="nick">닉네임</td>
+                        <td class="count">2</td>
+                        <td class="date">2023-12-06</td>
+                    </tr>
+                    <tr>
+                        <td class="no">1</td>
+                        <td class="subject">게시물 제목</td>
+                        <td class="nick">닉네임</td>
+                        <td class="count">2</td>
+                        <td class="date">2023-12-06</td>
+                    </tr>
+                    <tr>
+                        <td class="no">1</td>
+                        <td class="subject">게시물 제목</td>
+                        <td class="nick">닉네임</td>
+                        <td class="count">2</td>
+                        <td class="date">2023-12-06</td>
+                    </tr>
+                    <tr>
+                        <td class="no">1</td>
+                        <td class="subject">게시물 제목</td>
+                        <td class="nick">닉네임</td>
+                        <td class="count">2</td>
+                        <td class="date">2023-12-06</td>
+                    </tr>
+                    <tr>
+                        <td class="no">1</td>
+                        <td class="subject">게시물 제목</td>
+                        <td class="nick">닉네임</td>
+                        <td class="count">2</td>
+                        <td class="date">2023-12-06</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <!-- 요약행 -->
+                </tfoot>
+            </table>
+        </div>
+    </section>
+    <!-- 
+        영역태그 : div (블록태그)
+        영역태그 : span (인라인태그)
+     -->
+    <section class="notice content">
+        <div class="inner">
+            <div class="wrap">
+                <div class="box">
+                    <h2 class="title">Notice</h2>
+                    <button type="button" onclick="openBoard()">게시판보기</button>
+                    <ul class="list">
+                        <li>
+                            <a href="#">
+                                <span class="notice_title">[W컨셉] 11월 쇼핑리워드 이벤트 당첨자 안내</span>
+                                <span class="date">2023-12-01</span>
+                            </a>
+                        </li>      
+                        <li>
+                            <a href="#">
+                                <span class="notice_title">[W컨셉] MOHAN(모한) W.LIVE 경품 당첨자 안내</span>
+                                <span class="date">2023-12-01</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="notice_title">[W컨셉]LOOKAST(룩캐스트) W.LIVE 퀴즈 당첨자 안내</span>
+                                <span class="date">2023-12-01</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="notice_title">[W컨셉] 다샤 퀵 스타일링 기획전 이벤트 당첨자 안내</span>
+                                <span class="date">2023-11-29</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="notice_title">[W컨셉] Patagonia 런칭 이벤트 당첨자 안내</span>
+                                <span class="date">2023-11-28</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <h2 class="title">Contact</h2>
+                    <ul class="list2">
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="inner">
+
+        </div>
+    </footer>
+
+    <script>
+
+        // 이벤트 리스너 - 컴퓨터에서 발생하는 이벤트에 동작하려고 기다리는 중
+        // 이벤트 : 유저가 웹페이지 접속해서 클릭, 스크롤, 키보드입력, 드래그..등의 동작을 하는 것. ㄴ
+        //  click / mouseenter / mouoseleave /scroll / keydown/keyup
+        // https://developer.mozilla.org/en-US/docs/Web/Events
+
+
+        // 단수 - 1개만 찾아옴(여러개 일 경우 첫번째 요소만 찾아옴)
+        // 복수 - 여러개 찾아 올 수 있음.
+        // let noticeList2 = document.querySelector(); // 한개만 찾아옴
+        let noticeList = document.querySelectorAll('.notice .list li');
+        
+        // function(){}  -> ()=>{}
+        for(let i = 0; i < noticeList.length; i++){
+            noticeList[i].addEventListener('mouseenter', ()=>{
+                yellow(noticeList[i]);
+            }); 
+            noticeList[i].addEventListener('mouseleave', ()=>{
+                original(noticeList[i]);
+            }); 
+
+        }
+        
+        function openBoard(){
+            let board = document.getElementsByClassName('list');
+            console.log('test');
+            board[0].style.display="block";
+        }
+        
+
+        function yellow(item){
+            item.setAttribute('style', 'background-color : yellow');
+        }
+
+        function original(item){
+            item.setAttribute('style', 'background-color : transparent');
+        }
+    </script>
+</body>
+</html>

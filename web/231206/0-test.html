@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .list > li:nth-of-type(2n+1){background-color: yellow;}
+        .list li{}
+        .box p{font-size: 24px; color: red;}
+        .box a{display: block;}
+        
+        .box p ~ a{font-size: 24px;}
+        .box p + a{color: pink;}
+        .box p + a + a{color: green; }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <p>test</p>
+        <a href="#">test</a>
+        <a href="#">test</a>
+        <a href="#">test</a>
+        <p>test</p>
+    </div>
+
+
+
+    <!-- 구조 선택자 -->
+    <ul class="list">
+        <li>test
+            <ul>
+                <li>2단계</li>
+                <li>2단계</li>
+                <li>2단계</li>
+                <li>2단계</li>
+            </ul>
+        </li>
+        <li>test</li>
+        <li>test</li>
+        <li>test</li>
+        <li>test</li>
+        <li>test</li>
+        <li>test</li>
+        <li>test</li>
+        <li>test</li>
+        <li>test</li>
+    </ul>
+    
+</body>
+</html>

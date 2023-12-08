@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header"></header>
+    <section class="regist content">
+        <div class="inner">
+            <h2 class="title">회원가입</h2>
+            <div class="wrap">
+                <!-- 기본 폰트사이즈 : 16px -->
+                <form>
+                    <fieldset>
+                        <legend>회원가입</legend>
+                        <table>
+                            <tr>
+                                <td><label for="id">아이디</label></td>
+                                <td><input type="text" id="id" placeholder="@포함한 이메일주소 입력"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="pw">비밀번호</label></td>
+                                <td><input type="password" id="pw" placeholder="비밀번호(영문,숫자,특수문자조합 8~15자리)"></td>
+                            </tr>
+                            <tr>
+                                <td><label for=" ">생년월일</label></td>
+                                <td>
+                                    <select>
+                                        <!-- option[value="198$"]{198$}*9 -->
+                                        <option value="1981">1981</option>
+                                        <option value="1982">1982</option>
+                                        <option value="1983">1983</option>
+                                        <option value="1984">1984</option>
+                                        <option value="1985">1985</option>
+                                        <option value="1986">1986</option>
+                                        <option value="1987">1987</option>
+                                        <option value="1988">1988</option>
+                                        <option value="1989">1989</option>
+                                        <option value="1990">1990</option>
+                                        <option value="1991">1991</option>
+                                        <option value="1992">1992</option>
+                                        <option value="1993">1993</option>
+                                        <option value="1994">1994</option>
+                                        <option value="1995">1995</option>
+                                        <option value="1996">1996</option>
+                                        <option value="1997">1997</option>
+                                        <option value="1998">1998</option>
+                                        <option value="1999">1999</option>
+                                        <option value="2000">2000</option>
+                                    </select>
+                                    년
+                                    <select>
+                                        <!-- option[value="$"]{$}*12 -->
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                    </select>
+                                    월
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="phone">연락처</label></td>
+                                <td>
+                                    <select>
+                                        <option value="010">010</option>
+                                        <option value="011">011</option>
+                                        <option value="016">016</option>
+                                        <option value="019">019</option>
+                                    </select>
+                                    -<input type="text" id="phone-1">
+                                    -<input type="text" id="phone-2">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>성별</td>
+                                <td>
+                                    <label for="gender_m">남자</label><input type="radio" name="gender" id="gender_m">
+                                    <label for="gender_f">여자</label><input type="radio" name="gender" id="gender_f">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="submit" value="확인">
+                                    <input type="reset" value="다시 작성">
+                                </td>
+                            </tr>
+
+
+                        </table>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer"></footer>
+</body>
+</html>

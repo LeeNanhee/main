@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <h1 id="logo">자바스크립트 실습</h1>
+    <img src="" alt="마카롱" id="macaron">
+    <ul class="list">
+        <li  class="item">test</li>
+        <li  class="item">test</li>
+        <li  class="item">test</li>
+        <li  class="item">test</li>
+        <li  class="item">test</li>
+        <li  class="item">test</li>
+        <li  class="item">test</li>
+        <li  class="item">test</li>
+        <li  class="item">test</li>
+    </ul>
+
+    <button type="button" class="alert-btn">열기!</button><br><br>
+    <button type="button" onclick="알림창열기()">알림창 열기!</button>
+    <div class="alert-box"> 알림창 </div>
+
+    <script>
+        document.getElementById('logo').innerHTML = "로고!";
+        document.getElementById('logo').style.color = '#01DF74';
+        document.getElementById('logo').style.fontSize = '20px'
+        document.getElementById('macaron').src="images/macaron-1.jpg";
+
+        // 모든 클래스는 여러개가 존재할 수 있기 때문에, 배열처럼 취급하고,
+        // 인덱스 번호를 붙여서 하나하나 값을 바꿔야 한다.
+        var item = document.getElementsByClassName('item');
+
+        for(var i = 1; i < item.length; i+=2){
+            item[i].setAttribute('style','color:red; font-weight:bold');
+        }
+
+        document.getElementsByClassName('item')[2].setAttribute('style','font-size:36px; font-family: impact');
+        
+        function 알림창열기(){
+            document.getElementsByClassName('alert-box')[0].style.display='block';
+        }
+        function 알림창닫기(){
+            document.getElementsByClassName('alert-box')[0].style.display='none';
+        }
+
+        // 변수선언 키워드  var /  let (자료형 구분없이 쓴다) - 호이스팅 문제에 다르게 반응(추후설명)
+        // 요소.addEventListener('이벤트', function(){  // 실행할 내용; });
+        let alertBtn = document.getElementsByClassName('alert-btn')[0];
+        let alertBox = document.getElementsByClassName('alert-box')[0];
+        let isOpen = false;
+
+        alertBtn.addEventListener('click',function(){
+            // not 연산자 : true->false, false->true
+            if(!isOpen){
+                isOpen = true;
+                alertBtn.innerHTML ="닫기"
+                alertBox.style.display='block';
+            }else{
+                isOpen = false;
+                alertBtn.innerHTML ="열기"
+                alertBox.style.display='none';
+            }
+            
+        });
+
+    </script>
+</body>
+</html>
+
+

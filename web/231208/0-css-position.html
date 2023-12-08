@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+/* 
+        position:absolute; 적용했을 때 특징
+
+        1) 부모가 자식의 높이를 인식x
+        - 부모 높이x, 자식 모두 absolute를 적용 0 - 부모의 높이가 0이 됨
+        - 부모 높이x, absolute 적용0, absolute 적용x - 부모의 높이가 absolute적용 안한 요소들만 잡는다.
+
+        2) absoulte요소는 부모를 기준으로 좌표값을 지정하여, 위치 설정. 
+
+        3) 만약 인라인요소에 absolute적용하면, 마치 block처럼 작동한다.
+        - 너비, 높이, 패딩, 마진 적용 가능해 진다. 
+          (참고 : 인라인 요소는 너비, 높이, 상하마진, 상하패딩 적용이 안된다. )
+*/
+
+
+        *{margin: 0 ;padding:0; box-sizing: 0;}
+        /* 부모요소 : position:relative , 자식 : position:absolute */
+        .wrap{
+            position:relative;
+            width: 500px; height: 500px; border: 10px solid black;
+            
+        }
+        .box{
+            position:absolute;
+            width: 100px; height: 100px; background-color: pink;
+        }
+
+        .box:nth-of-type(1){left: 10px; top: 10px;}
+        .box:nth-of-type(2){right: 10px; top: 10px;}
+        .box:nth-of-type(3){left: 10px; bottom: 10px;}
+        .box:nth-of-type(4){right: 10px; bottom: 10px;}
+
+    </style>
+
+</head>
+<body>
+    <div class="wrap">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+</body>
+</html>
