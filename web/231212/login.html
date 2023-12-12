@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <section class="login content">
+        <div class="inner">
+            <h2 class="title">LOGIN</h2>
+            <!-- form 안의 내용들을 묶어서 action의 파일로 데이터 값을 넘겨주고 처리한다 -->
+            <form action="#">
+                <div class="loginBox">
+                    <div class="idBox">
+                        <label for="id">아이디</label>
+                        <input type="text" id="id" placeholder="아이디" >
+                    </div>
+                    <div class="pwBox">
+                        <label for="pw">비밀번호</label>
+                        <input type="password" id="pw" placeholder="비밀번호" >
+                        
+                    </div>
+                    <div class="errorBox">
+                        <p class="errorMessage"></p>
+                    </div>
+                    <div class="loginBtnBox">
+                        <button type="submit" id="loginBtn">확인</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <script src="js/login.js"></script>
+</body>
+</html>
+
+
+
+    <!-- FROM관련 태그
+    <form action="데이터를 전송할 파일 이름.php / jsp">
+        <input type="" id="아이디값">
+        - text(일반적인 text), password(비밀번호) / url, email, phone..
+        - radio(중복선택x), checkbox(중복선택0) -> name 옵션 (똑같이 써줘야 한 그룹으로 인식)
+        - button(기능 실행), submit(전송), reset(전체지우기)
+
+        <label for="아이디값">
+    </form>
+
+    -->
+
