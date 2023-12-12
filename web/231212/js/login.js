@@ -18,6 +18,8 @@ let userPw = document.getElementById("pw");
 let loginBtn = document.getElementById("loginBtn");
 let errorMessage = document.getElementsByClassName("errorMessage")[0];
 
+// 정규식 : 영어소문자, 숫자, 특수문자가 1개 이상 반드시 포함되어야 한다
+const regex = /(?=.*[a-z])(?=.*[\d])(?=.*[@$!%*?&]])[a-z\d@$!%*?&]+/;
 
 // 문제3. loginBtn을 클릭하면, 현재 id, pw 박스에 설정된 value를 출력해라. 콘솔창에
 // 1) addEventListener 이용하시오
@@ -27,15 +29,24 @@ loginBtn.addEventListener('click', function(){
 
     // 문제4. userId, userPW가 비어 있다면, 콘솔창에 값이 없습니다 띄우기
     // id 입력x, pw입력x, 둘다 입력 안 된 경우 - if / && / ||
+    // else if 추가 - 아이디가 4~12글자가 아니면- 아이디는 4~12글자 입니다.
+    let idValue = userId.value;
+    let pwValue = userPw.value;
     
-    if(userId.value =="" && userPw.value ==""){
+    if(idValue =="" &&  pwValue==""){
         errorMessage.innerText = "ID와 PW를 입력해주세요";
-    }else if(userId.value ==""){
+    }else if(idValue ==""){
         errorMessage.innerText = "ID를 입력해주세요";
-    }else if(userPw.value ==""){
+    }else if(pwValue ==""){
         errorMessage.innerText = "password를 입력해주세요";
-    }else{
-        
+    }else if(idValue.length < 4  || idValue.length > 12){
+        errorMessage.innerText = "아이디는 4~12글자 입니다.";
+    }else if(!regex.test(userInfo.pw)){ 
+        // 정규식에 안 맞으면 false -> true가 되어서 실행됨
+        errorMessage.innerText = "비밀번호는 영문소문자, 숫자, 특수문자로 구성되어 있습니다.";
+    }
+    else{
+        // 모두 입력된 상태
         if(userId.value == userInfo.id && userPw.value == userInfo.pw){
             errorMessage.innerText ="";
             userId.value = "";
@@ -48,7 +59,6 @@ loginBtn.addEventListener('click', function(){
         }
 
     }
-    
     
       
     // 문제5. 비밀번호를 - 숫자, 문자, 특수문자 포함 - 유효성 검사 (정규식)
