@@ -1,41 +1,105 @@
-## javascript 문제
+# 
 
-문제1) 객체 생성하기
-userInfo객체에 아이디(id)와 비밀번호(password) 프로퍼티로 저장 - korea / asdf1234!!
+## 리터럴 - 변수처럼 정의해서 객체 만들때 
 
-문제2) 필요한 요소를 선택해서 변수에 담아 놓기
-- userId변수에 = 아이디 받을 값 체크  - 아이디에 대한 요소 선택
-- userPW변수에 = 비밀번호 값을 체크  - 비밀번호 칸에 대한 요소 선택
-- loginBtn 변수에 = 로그인 버튼 선택해서 담아두기
+학생 객체 = object(타입 이름)
 
-문제3) loginBtn을 클릭하면, 현재 id, pw 박스에 설정된 value를 출력해라. 콘솔창에
-- 1) addEventListener 이용하시오
-- 2) 태그에 이벤트 연결하는 방법
+let num = 10;
 
-문제4) 폼태그에 저장되었던 값 검사
-- id, pw 둘 다 입력 안 된 경우 - 메시지 처리
-- id 입력 안 된 경우
-- pw 입력 안 된 경우
-- id 가 4-12글자가 아니면, 아이디는 4-12글자 입니다. 출력
-- pw가 숫자, 문자, 특수문자 포함 각각 반드시 1개 이상 포함 - 정규식 활용
-
-문제5) 객체에 담긴 userId, userPw가 일치하는 검사
-- 입력받은 내용과 일치하면 - alert('로그인성공')
-- 실패하면  - 아이디 또는 비밀번호를 잘못 입력했습니다. 입력하신 내용을 확인해주세요.
-    
+- 객체 리터럴 - 변수처럼 정의해서 객체 만들때
+- 클래스가 없어도 객체 생성 가능하다.
+- 키와 값이 짝궁(한 셋트)
+- 키(key) : 변수와 이름 짓는 규칙 비슷
+- 값(value) : 원시타입( 숫자, 문자, null, undefined, true/false )
 
 
-# 정규식
-문자열에서 특정 내용을 찾거나, 대체, 발췌하는데 사용 - 검사
-사용자가 입력한 값을 올바른지 검증하고 싶을 때
-- 특정 조건과 위치에 따라서 문자열에 포함된 공백, 특수문제 제거
-- arr 이름이 들어간 변수의 이름을 array변경하고 싶은데
-    함수에도 arr들어간 이름이 있음. 함수는 바꾸고 싶지 않아. 
 
-    ex) 전화를 입력했는데 - 형식에 맞지 않습니다.
-    ex) 생년월일 입력했는데 - 규칙에 맞지 않다 메시지
+```
+let student = {
+    name : '홍길동',
+    score : {
+        math : 90,
+        kor : 95,
+        eng : 82
+    },
+    grade : 'A',
+    showInfo : function() {
+        document.write(`<h2>학생정보</h2>`); 
+        document.write(`<p>name : ${this['name']}</p>`);
+        document.write(`<p>grade : ${this['grade']}</p>`);
+        if('addr' in this){
+            document.write(`<p>address : ${this['addr']}</p>`);    
+        }
+        if('email' in this){
+            document.write(`<p>email : ${this['email']}</p>`); 
+        }
+    },
+    printScore : function(){
+        document.write(`<h2>점수</h2>`); 
+        for(subject in this.score){
+            document.write(`<p>${subject} : ${this.score[subject]}</p>`); 
+        }
+    }
+};                                                                                                              
+student.showInfo();
+student.printScore();
+document.write(`<hr>`); 
+```
+ 1) 속성 추가
+
+```
+student.addr = 'seoul';
+student['email'] = 'abc@naver.com';
+```
+
+ 2) 속성 삭제
+```
+delete student.grade
+console.log(student);
+```
+ 3) 출력
 
 
-관련 참고 링크
+ (1) 콘솔
+ ```
+console.log(student.addr);
+console.log(student['name']);  인덱싱하듯이
+```
 
-https://velog.io/@suuhyeony/JS-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%A0%95%EA%B7%9C%ED%91%9C%ED%98%84%EC%8B%9D
+ (2) 브라우저 - document.write('작성한 내용 그대로 브라우저에 출력');
+ 백틱으로 출력
+```
+document.write(`<p> ${student['name']} </p>`);
+document.write(`<p> ${student.addr} </p>`);
+```
+
+ (3) 반복문 이용한 출력
+ 
+ for( 변수명 in 객체명 ){} 
+  -- 객체 안에서 반복을 돌면서, 속성들을 하나씩 출력해준다.
+ 변수명에 객체의 속성의 key가 담긴다. 변수명은 내가 정해주면 됨.
+```
+ for( key in student) {
+     document.write(`<p>${key} : ${student[key]}</p>`);
+ }
+```
+ 4) 해당하는 속성이 있는지? 검사
+ ```
+console.log('name' in student);  true
+console.log('grade' in student);  false
+```
+
+ for~in 반복문 통해, 객체의 속성을 모두 출력 가능
+for( 변수명 in 객체명) {}
+ 변수에 담기는 것은? key이 담긴다
+ 속성의 값을 출력하고 싶으면 ?  객체명[key]
+
+
+ 객체에 점수만 출력하는 printScore 메서드를 정의하시오.
+ 실행하면 과목명과 점수만 출력되도록.
+```
+for( subject in student.score){
+    console.log(subject, student.score[subject]);
+}
+```
+
