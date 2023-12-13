@@ -8,6 +8,10 @@ let userInfo = {
 }
 
 // 문제2) 필요한 요소를 선택해서 변수에 담아 놓기
+let boxColor = document.getElementsByClassName('boxColor');
+let inputBox = document.getElementsByClassName('inputBox');
+//let userIdBox2 = document.querySelectorAll('.idBox')[0];
+
 let userId = document.getElementById("id");
 let userPw = document.getElementById("pw");
 let loginBtn = document.getElementById("loginBtn");
@@ -15,6 +19,23 @@ let errorMessage = document.getElementsByClassName("errorMessage")[0];
 
 // 정규식 : 영어소문자, 숫자, 특수문자가 1개 이상 반드시 포함되어야 한다
 const regex = /(?=.*[a-z])(?=.*[\d])(?=.*[@$!%*?&]])[a-z\d@$!%*?&]+/;
+
+
+
+for(let i = 0; i < boxColor.length; i++){
+
+    inputBox[i].addEventListener('click', function(){
+        boxColor[i].classList.add('focus');
+        console.log('test');
+    });
+    
+    inputBox[i].addEventListener('blur', function(){
+        boxColor[i].classList.remove('focus');
+    });
+    
+}
+
+
 
 // 문제3. loginBtn을 클릭하면 아래의 동작 수행
 // 1) addEventListener 이용하시오

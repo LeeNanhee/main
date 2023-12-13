@@ -17,8 +17,12 @@ a{text-decoration: none;} /* a태그 기본서식 - 밑줄 없애기*/
     /* 기본사이즈 16px */
 }
 
-.login .loginBox .idBox{border-radius: 5px 5px 0 0 ; border: 1px solid #aaa;}
-.login .loginBox .pwBox{border-radius: 0 0 5px 5px; border: 1px solid #aaa;}
+
+.login .loginBox .boxColor{border: 1px solid #ddd;}
+.login .loginBox .boxColor.focus{border-color: rgb(20, 218, 20);}
+
+.login .loginBox .idBox{border-radius: 5px 5px 0 0 ; }
+.login .loginBox .pwBox{border-radius: 0 0 5px 5px;}
 
 .login .loginBox label{width: 80px; line-height: 40px;}
 /* css 함수 - 계산해주는 함수, 연산자 앞뒤로 띄어쓰기 필수, 단위 필수 */
