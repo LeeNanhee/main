@@ -1,7 +1,7 @@
 ## javascript 문제
 
 문제1) 객체 생성하기
-userInfo객체에 아이디(id)와 비밀번호(password) 프로퍼티로 저장 - korea / 1234
+userInfo객체에 아이디(id)와 비밀번호(password) 프로퍼티로 저장 - korea / asdf1234!!
 
 문제2) 필요한 요소를 선택해서 변수에 담아 놓기
 - userId변수에 = 아이디 받을 값 체크  - 아이디에 대한 요소 선택
