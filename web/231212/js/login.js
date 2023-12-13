@@ -4,9 +4,8 @@
 
 let userInfo = {
     id : 'korea', 
-    pw : 'abcd1234@@'
+    pw : 'abcd1234@@' // 영어소문자, 숫자, 특수문자로 이루어진 비밀번호로 설정
 }
-
 
 // 문제2) 필요한 요소를 선택해서 변수에 담아 놓기
 let userId = document.getElementById("id");
@@ -54,7 +53,7 @@ loginBtn.addEventListener('click', function(){
         // 문제5. 객체에 담긴 userId, userPw가 일치하는 검사
         // 입력받은 내용과 일치하면 - alert('로그인성공')
         // 실패하면  - 아이디 또는 비밀번호를 잘못 입력했습니다. 입력하신 내용을 확인해주세요.
-        if(userId.value == userInfo.id && userPw.value == userInfo.pw){
+        if(idValue == userInfo.id && pwValue == userInfo.pw){
             errorMessage.innerText ="";
             userId.value = "";
             userPw.value = ""
