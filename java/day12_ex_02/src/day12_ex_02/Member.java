@@ -48,6 +48,8 @@ public class Member {
 	
 	public boolean equals(Object obj) {
 		if( obj instanceof Member){
+			
+			// 새로추가된 memberId와 기존에 있는 memberId가 같은게 있는지 비교
 			Member member = (Member)obj;
 			if( this.memberId == member.memberId )
 				return true;

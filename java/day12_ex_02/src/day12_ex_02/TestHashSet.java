@@ -14,6 +14,10 @@ public class TestHashSet {
 		Member memberHong = new Member(1003, "홍길동");  //1003 아이디 중복인데 추가가됨
 		memberHashSet.addMember(memberHong);
 		memberHashSet.showAllMember();
+	
+		
+		memberHashSet.removeMember(1002);
+		memberHashSet.showAllMember();
 		
 	}
 	

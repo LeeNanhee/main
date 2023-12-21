@@ -18,11 +18,13 @@ public class MemberArrayList {
 	
 	public boolean removeMember(int memberId){ 
 		
-		Iterator<Member> ir = arrayList.iterator();
+		
 		// hasNext() : Iterator가 가리키는 곳에 데이터가 있으면 true, 없으면 false
 		// next() : 다음 데이터
 		// remove() : next()로 읽어온 요소를 삭제한다
 		// 메서드 호출 순서 : hasNext()-> next()->remove()순으로 호출
+		
+		Iterator<Member> ir = arrayList.iterator();
 		
 		while( ir.hasNext() ) {
 			

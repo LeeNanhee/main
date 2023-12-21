@@ -22,7 +22,7 @@ public class MemberHashSet {
 		while( ir.hasNext()){
 			Member member = ir.next();
 			int tempId = member.getMemberId();
-			if( tempId == memberId){
+			if( tempId == memberId){ // tempId.equals(memberId);
 				hashSet.remove(member);
 				return true;
 			}
